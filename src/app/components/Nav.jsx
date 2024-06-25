@@ -53,14 +53,14 @@ export default function Nav() {
           <div className="flex justify-center md:items-center items-stretch lg:gap-5 gap-2 md:flex-row flex-col">
             <Link
               href="#"
-              className="flex justify-center items-center gap-1 text-blue-800 text-lg bg-blue-50 rounded-full lg:bg-transparent lg:p-0 p-3"
+              className="flex justify-center items-center gap-1 text-green-800 text-lg bg-green-50 rounded-full lg:bg-transparent lg:p-0 p-3"
             >
               <MdOutlinePhone />
               <p className="md:hidden lg:block">(+20) 123 456 7890</p>
             </Link>
             <Link
               href="#"
-              className="flex justify-center items-center gap-1 text-blue-800 text-lg bg-blue-50 rounded-full lg:bg-transparent lg:p-0 p-3"
+              className="flex justify-center items-center gap-1 text-green-800 text-lg bg-green-50 rounded-full lg:bg-transparent lg:p-0 p-3"
             >
               <FaLocationDot />
               <p className="md:hidden lg:block">Alexandria, Egypt</p>
@@ -74,7 +74,7 @@ export default function Nav() {
               <li key={id}>
                 <Link
                   href={link}
-                  className="menu-link text-blue-800 text-md hover:text-blue-950 transition-all after:bg-green-600"
+                  className="menu-link text-green-800 text-md hover:text-green-950 transition-all after:bg-green-600"
                 >
                   {name}
                 </Link>
