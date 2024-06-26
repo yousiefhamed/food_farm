@@ -1,5 +1,5 @@
-import { FaArrowRightLong } from "react-icons/fa6";
 import HeadingText from "./HeadingText";
+import ProductsBtn from "./ProductsBtn";
 
 export default function HeroSection() {
   return (
@@ -20,10 +20,7 @@ export default function HeroSection() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe vero
         iste aliquid, reprehenderit distinctio laudantium magni excepturi
       </p>
-      <button className="bg-green-600 text-white py-2 px-4 rounded-full flex justify-center items-center gap-3 shadow-md hover:bg-green-400 hover:text-black">
-        See Our Products
-        <FaArrowRightLong />
-      </button>
+      <ProductsBtn />
     </section>
   );
 }

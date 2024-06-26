@@ -29,14 +29,17 @@ export default function Features() {
     },
   ];
   return (
-    <section className="text-center">
+    <section className="text-center px-5">
       <HeadingText
         subHeading={"Our Special Features"}
         mainHeading={"Pure Agriculture and Organic Farm"}
       />
-      <div className="flex justify-center items-center gap-5 p-4 my-5">
+      <div className="flex md:flex-row flex-col justify-center items-center gap-5 p-4 my-5">
         {features.map(({ icon, color, title, description }) => (
-          <div className="flex flex-col justify-center items-center gap-2">
+          <div
+            key={title}
+            className="flex flex-col justify-center items-center gap-2"
+          >
             <figure className={`${color} p-3 rounded-full`}>{icon}</figure>
             <h4 className="text-green-950 font-bold text-lg">{title}</h4>
             <p className="text-gray-500 text-base font-medium text-center max-w-96">
