@@ -15,6 +15,7 @@ export default function HeroSection() {
         subHeading={"welcome to our farm"}
         mainHeading={"Enjoy the Organic Food"}
         isHero={true}
+        isCenter={true}
       />
       <p className="text-gray-500 text-base font-medium text-center max-w-[500px] pt-2 pb-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe vero

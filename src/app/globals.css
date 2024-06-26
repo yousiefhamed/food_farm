@@ -116,3 +116,10 @@ body {
     transform: translate(0, 0);
   }
 }
+
+.img-text {
+  grid-template-columns: 1fr 500px;
+  @media (width<1024px) {
+    grid-template-columns: 1fr;
+  }
+}
