@@ -1,7 +1,5 @@
-import { Dancing_Script } from "next/font/google";
 import { FaArrowRightLong } from "react-icons/fa6";
-
-const dancingScript = Dancing_Script({ subsets: ["latin"] });
+import HeadingText from "./HeadingText";
 
 export default function HeroSection() {
   return (
@@ -11,18 +9,14 @@ export default function HeroSection() {
         background: "url(/imgs/BannerImg.png) no-repeat center",
         backgroundSize: "cover",
       }}
-      className="w-full min-h-[500px] flex flex-col justify-start items-center overflow-hidden rounded-bl-[75px] py-24 px-5 text-center"
+      className="w-full min-h-[500px] flex flex-col justify-start items-center overflow-hidden rounded-bl-[75px] py-24 px-5"
     >
-      <h1
-        style={{ WebkitTextStroke: "2px #16a34a" }}
-        className={`${dancingScript.className} text-green-600 text-3xl`}
-      >
-        welcome to our farm
-      </h1>
-      <h2 className="text-green-900 text-5xl font-bold italic py-5">
-        Enjoy the Organic Food
-      </h2>
-      <p className="text-gray-500 text-base font-medium max-w-[500px] pt-2 pb-5">
+      <HeadingText
+        subHeading={"welcome to our farm"}
+        mainHeading={"Enjoy the Organic Food"}
+        isHero={true}
+      />
+      <p className="text-gray-500 text-base font-medium text-center max-w-[500px] pt-2 pb-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe vero
         iste aliquid, reprehenderit distinctio laudantium magni excepturi
       </p>
