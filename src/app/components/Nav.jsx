@@ -45,9 +45,7 @@ export default function Nav() {
       <nav className="p-web relative h-16 bg-white flex justify-end items-center shadow-md z-50">
         <div
           className={`w-full md:flex md:justify-end lg:justify-between items-center gap-5 close-menu ${
-            isClient && openMenu
-              ? "flex mobile-menu open justify-stretch"
-              : "hidden"
+            isClient && openMenu ? "grid mobile-menu" : "hidden"
           }`}
         >
           <div className="flex justify-center md:items-center items-stretch lg:gap-5 gap-2 md:flex-row flex-col">
