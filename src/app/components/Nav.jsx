@@ -41,7 +41,7 @@ export default function Nav() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full logo-shadow-effect after:shadow-md after:transition-all">
+    <header className="fixed top-0 left-0 w-full logo-shadow-effect after:shadow-md after:transition-all z-50">
       <nav className="p-web relative h-16 bg-white flex justify-end items-center shadow-md z-50">
         <div
           className={`w-full md:flex md:justify-end lg:justify-between items-center gap-5 close-menu ${

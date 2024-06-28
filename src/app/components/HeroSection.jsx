@@ -1,5 +1,5 @@
 import HeadingText from "./HeadingText";
-import ProductsBtn from "./ProductsBtn";
+import CtaBtn from "./CtaBtn";
 
 export default function HeroSection() {
   return (
@@ -21,7 +21,7 @@ export default function HeroSection() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe vero
         iste aliquid, reprehenderit distinctio laudantium magni excepturi
       </p>
-      <ProductsBtn />
+      <CtaBtn link="/products" txt="See Our Products" />
     </section>
   );
 }

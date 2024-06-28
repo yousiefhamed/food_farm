@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ImQuotesLeft } from "react-icons/im";
 import HeadingText from "./HeadingText";
-import ProductsBtn from "./ProductsBtn";
+import CtaBtn from "./CtaBtn";
 
 export default function ImgBesideText({
   subHeading,
@@ -40,7 +40,7 @@ export default function ImgBesideText({
           {description}
         </p>
         {!testimonial ? (
-          <ProductsBtn />
+          <CtaBtn link="/products" txt="See Our Products" />
         ) : (
           <div>
             <p className="text-green-600 font-extrabold text-2xl italic">
