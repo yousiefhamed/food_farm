@@ -7,4 +7,4 @@ client
   .setProject(process.env.NEXT_PUBLIC_PROJECT_ID);
 
 export const database = new Databases(client);
-export { ID } from "appwrite";
+export { Query, ID } from "appwrite";

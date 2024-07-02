@@ -1,7 +1,5 @@
 "use client";
 import Link from "next/link";
-import AddProduct from "./AddProducts";
-import { useState } from "react";
 
 export default function SideBar({ menu, chgComp, showMenu }) {
   return (
