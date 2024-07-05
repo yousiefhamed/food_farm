@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { database, Query } from "../api/appwrite/appwrite.config";
 import HeadingText from "./HeadingText";
 import { CiStar } from "react-icons/ci";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
@@ -9,21 +8,28 @@ export default function PopularProducts() {
   const [popularProd, setPopularProd] = useState([]);
 
   useEffect(() => {
-    async function getPopularProd() {
+    async function getProducts() {
       try {
-        let promise = database.listDocuments(
-          process.env.NEXT_PUBLIC_DATABASE_ID,
-          process.env.NEXT_PUBLIC_COLLECTION_ID,
-          [Query.limit(8)]
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_BACKEND_ENDPOINT}products/`,
+          {
+            method: "GET",
+            headers: {
+              limit: 8,
+            },
+          }
         );
-        const response = await promise;
-        setPopularProd(response.documents);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const productsDB = await response.json();
+        setPopularProd(productsDB);
       } catch (error) {
-        console.log(error);
+        console.error("Failed to fetch products:", error);
       }
     }
 
-    getPopularProd();
+    getProducts();
   }, []); // Empty dependency array ensures this runs once when the component mounts
 
   return (
@@ -32,7 +38,7 @@ export default function PopularProducts() {
         subHeading={"Awesome products"}
         mainHeading={"Our Popular Products"}
       />
-      <div className="flex md:flex-row flex-col justify-center items-stretch flex-wrap gap-7 p-4 my-5">
+      <div className="flex md:flex-row flex-col justify-center items-center md:items-stretch flex-wrap gap-7 p-4 my-5">
         {popularProd.length > 0 &&
           popularProd.map(({ productName, price, image, from, rating }) => (
             <div
