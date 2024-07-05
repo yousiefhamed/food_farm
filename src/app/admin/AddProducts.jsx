@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { createDoc } from "./../api/appwrite/handleProducts";
 import CtaBtn from "./../components/CtaBtn";
 import HeadingText from "./../components/HeadingText";
 import {
@@ -121,20 +120,20 @@ export default function AddProduct() {
     setErrors(newErrors);
     if (Object.keys(newErrors).length === 0) {
       const { descChar, ...rest } = formData;
-      createDoc(rest)
-        .then((response) => {
-          if (response[0] === 200) {
-            setFormResponse([
-              200,
-              `The "${response[1].productName}" has been added Successfully with ID = "${response[1].$id}"`,
-            ]);
-          } else {
-            setFormResponse([400, `Error: ${response[1]}`]);
-          }
-        })
-        .catch((err) => {
-          setFormResponse(`Error: ${err.message}`);
-        });
+      // createDoc(rest)
+      //   .then((response) => {
+      //     if (response[0] === 200) {
+      //       setFormResponse([
+      //         200,
+      //         `The "${response[1].productName}" has been added Successfully with ID = "${response[1].$id}"`,
+      //       ]);
+      //     } else {
+      //       setFormResponse([400, `Error: ${response[1]}`]);
+      //     }
+      //   })
+      //   .catch((err) => {
+      //     setFormResponse(`Error: ${err.message}`);
+      //   });
     }
   };
 
